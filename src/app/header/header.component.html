@@ -1,0 +1,91 @@
+<section class="container">
+    <div class="header">
+        <img class="img" src="logo.svg" alt="Tile Expert">
+        <div class="menu" *ngIf="!searchInput">
+            <div class="menu_item">
+                <img class="icon" src="link.svg" alt="link" />
+                <p>Ссылки</p>
+            </div>
+            <div class="menu_item">
+                <img class="icon" src="contacts.svg" alt="ontacts" />
+                <p>Контакты</p>
+            </div>
+            <div class="menu_item">
+                <img class="icon" src="tags.svg" alt="tags" />
+                <p>Теги</p>
+            </div>
+            <div class="menu_item">
+                <img class="icon" src="selected.svg" alt="selected" />
+                <p>Избранное</p>
+            </div>
+            <div class="menu_item">
+                <img class="icon" src="visits.svg" alt="visits" />
+                <p>Посещения</p>
+            </div>
+            <div class="menu_item">
+                <img class="icon search" src="search.svg" alt="search" (click)="search()" />
+            </div>
+        </div>
+        <div *ngIf="searchInput">
+            <input class="search-bar" placeholder="Поисковый запрос" (click)="focusField()" />
+            <div class="dropdown" *ngIf="isFocus">
+                <div class="filters">
+                    <div class="filters_history">
+                        <p class="filters_history__title">История</p>
+                        <p class="filters_history__item">закрепить теги</p>
+                        <p class="filters_history__item">кнопка</p>
+                        <p class="filters_history__item">приложение</p>
+                        <p class="filters_history__item">форма</p>
+                        <p class="filters_history__item">текстовое поле</p>
+                        <p class="filters_history__item">выпадающий список</p>
+                    </div>
+                    <div class="filters_items">
+                        <div class="wrapper">
+                            <input class="input_autor" id="autor" placeholder="Имя или должность" />
+                            <button>
+                                <img src="me.svg" alt="me" />
+                            </button>
+                            <label class="autor-label" for="autor">Автор</label>
+                        </div>
+                        <div class=" strictSearch">
+                            <div class="filters_item">
+                                <input type="checkbox" id="member" name="member" />
+                                <label for="member">Я участник</label>
+                            </div>
+                            <div class="filters_item">
+                                <input type="checkbox" id="strict" name="strict" />
+                                <label for="strict">Строгий поиск</label>
+                            </div>
+                            <div class="filters_item">
+                                <input type="checkbox" id="in-title" name="in-title" />
+                                <label for="in-title">В заголовках</label>
+                            </div>
+                        </div>
+                        <p>Только</p>
+                        <div class="strictSearch">
+                            <div class="filters_item">
+                                <input type="checkbox" id="Tags" name="Tags" />
+                                <label for="Tags">Теги</label>
+                            </div>
+                            <div class="filters_item">
+                                <input type="checkbox" id="Requests" name="Requests" />
+                                <label for="Requests">Просьбы</label>
+                            </div>
+                            <div class="filters_item">
+                                <input type="checkbox" id="Contacts" name="Contacts" />
+                                <label for="Contacts">Контакты</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img class="icon" src="add.svg" alt="add">
+        </div>
+        <div class="user">
+            <img class="icon" src="notification.svg" alt="notification">
+            <img class="icon" src="avatar.svg" alt="avatar">
+        </div>
+    </div>
+</section>

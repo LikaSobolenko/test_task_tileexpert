@@ -1,0 +1,172 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 1400px;
+    height: 56px;
+    background-color: #1074CC;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.326);
+}
+
+.img {
+    width: 150px;
+    margin: 0 16px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #FFFFFF;
+    width: 756px;
+
+    .menu_item {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.icon {
+    width: 24;
+    margin: 0 8px 0 12px;
+}
+
+.search {
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.search-bar {
+    width: 744px;
+    height: 48px;
+    border-radius: 4px;
+}
+
+input {
+    padding-left: 12px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: #9AA1A6;
+}
+
+label {
+    margin-left: 5px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.8);
+    margin: 10px;
+}
+
+.user {
+    margin: 0 16px 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropdown {
+    position: absolute;
+    width: 756px;
+    height: 228px;
+    border-top: none;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 4px;
+}
+
+.filters {
+    display: flex;
+}
+
+.filters_history {
+    width: 216px;
+    border-right: 1px solid #E1E4E6;
+}
+
+.filters_history__title {
+    margin: 16px 0 0 16px;
+    color: #9AA1A6;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.filters_history__item {    
+    margin-left: 16px;
+}
+
+.filters_items {
+    margin: 16px;
+}
+
+.input_autor {
+    margin-bottom: 10px;
+    width: 438px;
+    height: 48px;
+    border: 1px solid #ccc;    
+    border-radius: 4px;
+    outline: none;
+}
+
+.wrapper {
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+}
+
+.wrapper button {
+    background: white;
+    border: none;    
+    position: absolute;
+    top: 14px;
+    right: -44px;
+    cursor: pointer;
+}
+
+.wrapper label {
+    background: white;
+    position: absolute;
+    top: -12px;
+    right: 345px;
+    padding: 5px;
+
+    color: #9AA1A6;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.strictSearch {
+    display: flex;
+}
+
+.filters_item {
+    margin: 6px 0 0 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 1113px) {
+    .menu {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu {
+        width: fit-content;
+    }
+}

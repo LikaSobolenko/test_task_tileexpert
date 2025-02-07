@@ -1,0 +1,44 @@
+<section>
+    <div class="header">
+        <img class="icon" src="arrow_back.svg" alt="arrow_back" (click)="backToMainPage()" />
+        <input class="search-bar" placeholder="Поиск" />
+    </div>
+    <div class="filters_items">
+        <div class="wrapper">
+            <input class="input_autor" id="autor" placeholder="Имя или должность" />
+            <button>
+                <img src="me.svg" alt="me" />
+            </button>
+            <label class="autor-label" for="autor">Автор</label>
+        </div>
+        <div class=" strictSearch">
+            <div class="filters_item">
+                <img class="icon" src="checkbox.svg" alt="checkbox" />
+                <label for="member">Я участник</label>
+            </div>
+            <div class="filters_item">
+                <img class="icon" src="checkbox.svg" alt="checkbox" />
+                <label for="strict">Строгий поиск</label>
+            </div>
+            <div class="filters_item">
+                <img class="icon" src="checkbox.svg" alt="checkbox" />
+                <label for="in-title">В заголовках</label>
+            </div>
+        </div>
+        <p>Только</p>
+        <div class="strictSearch">
+            <div class="filters_item">
+                <img class="icon" src="checkbox.svg" alt="checkbox" />
+                <label for="Tags">Теги</label>
+            </div>
+            <div class="filters_item">
+                <img class="icon" src="checkbox.svg" alt="checkbox" />
+                <label for="Requests">Просьбы</label>
+            </div>
+            <div class="filters_item">
+                <img class="icon" src="checkbox.svg" alt="checkbox" />
+                <label for="Contacts">Контакты</label>
+            </div>
+        </div>
+    </div>
+</section>

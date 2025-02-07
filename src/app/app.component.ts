@@ -1,12 +1,29 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: false,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test-task-tileexpert';
+  screenSize: string = 'desktop';
+
+  constructor() {
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    const width = window.innerWidth;
+    if (width > 480) {
+      this.screenSize = 'desktop'
+    } else {
+      this.screenSize = 'mobile';
+    }
+  }
 }
